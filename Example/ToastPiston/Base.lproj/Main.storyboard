@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,13 +17,55 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYK-6Q-l8I">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGW-gT-wdv">
+                                <rect key="frame" x="24" y="750" width="253" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NHW-3o-aBd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gks-S3-yhL">
+                                <rect key="frame" x="289" y="750" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NFO-pt-c5W"/>
+                                    <constraint firstAttribute="width" constant="80" id="pC3-tQ-Uha"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="show"/>
+                                <connections>
+                                    <action selector="didTapShowButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hF5-wa-v4Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vYK-6Q-l8I" secondAttribute="trailing" id="1Tj-aa-Ryo"/>
+                            <constraint firstAttribute="trailing" secondItem="Gks-S3-yhL" secondAttribute="trailing" constant="24" id="1qF-vr-qVC"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aGW-gT-wdv" secondAttribute="bottom" constant="24" id="GMi-mA-hdB"/>
+                            <constraint firstItem="aGW-gT-wdv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="24" id="GzV-Oe-nP0"/>
+                            <constraint firstAttribute="bottom" secondItem="vYK-6Q-l8I" secondAttribute="bottom" id="JiR-Qw-mQ2"/>
+                            <constraint firstItem="vYK-6Q-l8I" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LDR-Ln-Kxz"/>
+                            <constraint firstItem="vYK-6Q-l8I" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="NSG-fw-Hk6"/>
+                            <constraint firstItem="Gks-S3-yhL" firstAttribute="leading" secondItem="aGW-gT-wdv" secondAttribute="trailing" constant="12" id="Y6f-1M-IK0"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gks-S3-yhL" secondAttribute="bottom" constant="24" id="ZNY-Xk-Xrp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="Gks-S3-yhL" id="kfV-wA-g71"/>
+                        <outlet property="textField" destination="aGW-gT-wdv" id="9jC-GP-d5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-2.2488755622188905"/>
         </scene>
     </scenes>
 </document>

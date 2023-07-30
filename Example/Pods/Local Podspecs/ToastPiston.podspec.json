@@ -1,0 +1,22 @@
+{
+  "name": "ToastPiston",
+  "version": "0.1.0",
+  "summary": "A short description of ToastPiston.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/WallabyStuff/ToastPiston",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "WallabyStuff": "avocado34.131@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/WallabyStuff/ToastPiston.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "Sources/**/*"
+}

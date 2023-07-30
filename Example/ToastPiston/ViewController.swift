@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import ToastPiston
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+  
+  // MARK: - UI
+  
+  @IBOutlet weak var textField: UITextField!
+  @IBOutlet weak var button: UIButton!
+  
+  
+  // MARK: - Methods
+  
+  @IBAction func didTapShowButton(_ sender: Any) {
+    showPistonToast(title: textField.text ?? "")
+  }
 }
 
