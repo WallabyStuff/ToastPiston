@@ -8,6 +8,8 @@ extension UIViewController {
     
     static let contentHeight: CGFloat = 44
     static let contentHorizontalPadding: CGFloat = 16
+    
+    static let toastCornerRadius: CGFloat = 24
   }
   
   private struct AssociatedKeys {
@@ -59,6 +61,7 @@ extension UIViewController {
     // Create the visual effect view with blur effect
     let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: blurStyle))
     visualEffectView.translatesAutoresizingMaskIntoConstraints = false
+    visualEffectView.clipsToBounds = true
     currentToastView = visualEffectView
     
     // Create the label
@@ -136,6 +139,11 @@ extension UIViewController {
         toastView.transform = CGAffineTransform(translationX: 0, y: max(translation.y, -toastView.bounds.height))
       }
       
+      // Adjust corner radius if the user starts panning
+      let threshold: CGFloat = 24
+      let multiplier = min(max(toastView.frame.minY / threshold, 0), 1)
+      toastView.layer.cornerRadius = Constant.toastCornerRadius * multiplier
+      
       // Indicate that the user is panning
       isUserPanning = true
       
@@ -151,6 +159,7 @@ extension UIViewController {
       if velocity.y < -500 || translation.y < -toastView.bounds.height / 2 || panGestureExceedsPresentationDuration() {
         UIView.springAnimate(withDuration: Constant.toastPresentationDuration) {
           toastView.transform = CGAffineTransform(translationX: 0, y: -toastView.bounds.height)
+          toastView.layer.cornerRadius = .zero
         } completion: {
           toastView.removeFromSuperview()
           // Remove the reference to the toast view when it's removed from the superview
@@ -162,6 +171,7 @@ extension UIViewController {
         // Otherwise, bring the toast back to its original position
         UIView.springAnimate(withDuration: Constant.toastPresentationDuration) {
           toastView.transform = .identity
+          toastView.layer.cornerRadius = .zero
         }
       }
     default:
