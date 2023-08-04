@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
   static func springAnimate(withDuration: CGFloat,
                             animations: @escaping () -> Void,
                             completion: (() -> Void)? = nil) {
