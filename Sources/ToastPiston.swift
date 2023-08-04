@@ -12,6 +12,8 @@ extension UIViewController {
   
   private struct AssociatedKeys {
     static var currentToastView: UIVisualEffectView?
+    static var isUserPanning: Bool = false
+    static var panGestureStartTime: Date?
   }
   
   private var currentToastView: UIVisualEffectView? {
@@ -20,6 +22,24 @@ extension UIViewController {
     }
     set {
       objc_setAssociatedObject(self, &AssociatedKeys.currentToastView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+  }
+  
+  private var isUserPanning: Bool {
+    get {
+      return objc_getAssociatedObject(self, &AssociatedKeys.isUserPanning) as? Bool ?? false
+    }
+    set {
+      objc_setAssociatedObject(self, &AssociatedKeys.isUserPanning, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+  }
+  
+  private var panGestureStartTime: Date? {
+    get {
+      return objc_getAssociatedObject(self, &AssociatedKeys.panGestureStartTime) as? Date
+    }
+    set {
+      objc_setAssociatedObject(self, &AssociatedKeys.panGestureStartTime, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
   }
   
@@ -69,6 +89,10 @@ extension UIViewController {
       titleLabel.heightAnchor.constraint(equalToConstant: Constant.contentHeight)
     ])
     
+    // Add pan gesture recognizer to the toast view
+    let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleToastPanGesture(_:)))
+    visualEffectView.addGestureRecognizer(panGestureRecognizer)
+    
     // Animate the visual effect view from top to bottom
     visualEffectView.transform = CGAffineTransform(translationX: 0, y: -totalHeight)
     UIView.animate(withDuration: Constant.toastPresentationDuration,
@@ -79,6 +103,10 @@ extension UIViewController {
       visualEffectView.transform = .identity
     }, completion: { _ in
       DispatchQueue.main.asyncAfter(deadline: .now() + Constant.toastDuration, execute: {
+        // Only dismiss the toast automatically if the user is not panning
+        guard !self.isUserPanning else {
+          return
+        }
         UIView.animate(withDuration: Constant.toastPresentationDuration, animations: {
           visualEffectView.transform = CGAffineTransform(translationX: 0, y: -totalHeight)
         }, completion: { _ in
@@ -90,5 +118,73 @@ extension UIViewController {
         })
       })
     })
+  }
+  
+  @objc
+  private func handleToastPanGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
+    guard let toastView = currentToastView else {
+      return
+    }
+    
+    let translation = gestureRecognizer.translation(in: view)
+    
+    switch gestureRecognizer.state {
+    case .began:
+      // Store the start time of the pan gesture
+      panGestureStartTime = Date()
+    case .changed:
+      // Move the toast view as the user pans
+      if toastView.frame.minY > 0 {
+        toastView.transform = CGAffineTransform(translationX: 0, y: max(translation.y * 0.1, -toastView.bounds.height))
+      } else {
+        toastView.transform = CGAffineTransform(translationX: 0, y: max(translation.y, -toastView.bounds.height))
+      }
+      
+      // Indicate that the user is panning
+      isUserPanning = true
+      
+      // Cancel the automatic dismiss if the user starts panning
+      toastView.layer.removeAllAnimations()
+    case .ended, .cancelled:
+      let velocity = gestureRecognizer.velocity(in: view)
+      
+      // Indicate that the user has stopped panning
+      isUserPanning = false
+      
+      // If the user panned upwards with a sufficient velocity, or panned more than half of the toast view's height upwards, then dismiss the toast
+      if velocity.y < -500 || translation.y < -toastView.bounds.height / 2 || panGestureExceedsPresentationDuration() {
+        UIView.animate(withDuration: Constant.toastPresentationDuration,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.9,
+                       initialSpringVelocity: 0.9,
+                       options: .curveEaseInOut, animations: {
+          toastView.transform = CGAffineTransform(translationX: 0, y: -toastView.bounds.height)
+        }, completion: { _ in
+          toastView.removeFromSuperview()
+          // Remove the reference to the toast view when it's removed from the superview
+          if self.currentToastView == toastView {
+            self.currentToastView = nil
+          }
+        })
+      } else {
+        // Otherwise, bring the toast back to its original position
+        UIView.animate(withDuration: Constant.toastPresentationDuration,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.9,
+                       initialSpringVelocity: 0.9,
+                       options: .curveEaseInOut, animations: {
+          toastView.transform = .identity
+        })
+      }
+    default:
+      break
+    }
+  }
+  
+  private func panGestureExceedsPresentationDuration() -> Bool {
+    if let startTime = panGestureStartTime {
+      return Date().timeIntervalSince(startTime) > TimeInterval(Constant.toastPresentationDuration)
+    }
+    return false
   }
 }
