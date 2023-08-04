@@ -12,6 +12,7 @@
 		24D0A663DC46FC7B6CE7A275CCE311A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		4D3AE9AC5F6FDBA68F76758972D737B6 /* Pods-ToastPiston_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC68568790DC7FAE6F8CABEECA9458F1 /* Pods-ToastPiston_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5208106EF46FD9517375D70F6B5454EF /* Pods-ToastPiston_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F539E2BF8C59566106854E3A156F1 /* Pods-ToastPiston_Tests-dummy.m */; };
+		8EB69BE02A7CF1420010F665 /* UIView+SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB69BDF2A7CF1420010F665 /* UIView+SpringAnimation.swift */; };
 		950AF57CB5EFC07063B15E385F5E3963 /* ToastPiston-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E1DC33B50FDA721CE52983DDC57170 /* ToastPiston-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C16C4BABC48755D492FF2F60F7249466 /* ToastPiston.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8B3420613C19F236D03555726B4C33 /* ToastPiston.swift */; };
 		D686CD1FE29F8530C6142B356BD63758 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -57,17 +58,18 @@
 		81BDB4FD9004C7B825436EED3A0DC3DE /* ToastPiston-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ToastPiston-dummy.m"; sourceTree = "<group>"; };
 		866652D305132D0CD2AEF10DC39B862D /* ToastPiston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ToastPiston.debug.xcconfig; sourceTree = "<group>"; };
 		8837F136C050F0D0A4EF550FDB29A58A /* ToastPiston.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ToastPiston.modulemap; sourceTree = "<group>"; };
-		8AB0F095EF1292C408CE2A280651407C /* ToastPiston.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ToastPiston.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8AB0F095EF1292C408CE2A280651407C /* ToastPiston.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ToastPiston.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8EB69BDF2A7CF1420010F665 /* UIView+SpringAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SpringAnimation.swift"; sourceTree = "<group>"; };
 		910FDF06EF5904E175450F9746D34583 /* Pods-ToastPiston_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToastPiston_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		98CEABDB754B22414D063871E1C26D98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98CEABDB754B22414D063871E1C26D98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F8B3420613C19F236D03555726B4C33 /* ToastPiston.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastPiston.swift; path = Sources/ToastPiston.swift; sourceTree = "<group>"; };
 		A40CC1A4909439741C7425FA25A8FE10 /* Pods-ToastPiston_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToastPiston_Example-frameworks.sh"; sourceTree = "<group>"; };
 		AC68568790DC7FAE6F8CABEECA9458F1 /* Pods-ToastPiston_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToastPiston_Example-umbrella.h"; sourceTree = "<group>"; };
 		BECA465584D68CAE6AA02B83A54159A7 /* Pods-ToastPiston_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToastPiston_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C0DC0FDC5581A7FDB3C7D4E441089622 /* Pods-ToastPiston_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ToastPiston_Example"; path = Pods_ToastPiston_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C419D5E69BC3556D663F579E6FE26D27 /* Pods-ToastPiston_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToastPiston_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DB7E7DE2FE5E430231B55750F9B46C60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DB7E7DE2FE5E430231B55750F9B46C60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC2C90BC6F1A5D5C5ED062E75136A0B2 /* ToastPiston.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ToastPiston.release.xcconfig; sourceTree = "<group>"; };
 		F0BD9ABA6701B10DA64E97095E0FDE52 /* Pods-ToastPiston_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToastPiston_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				9F8B3420613C19F236D03555726B4C33 /* ToastPiston.swift */,
+				8EB69BDF2A7CF1420010F665 /* UIView+SpringAnimation.swift */,
 				E19C82DEFE7E14FFA0F67BB718EBF3D2 /* Pod */,
 				8D6C9FD1F43B9DFFE052C8175425257C /* Support Files */,
 			);
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB69BE02A7CF1420010F665 /* UIView+SpringAnimation.swift in Sources */,
 				C16C4BABC48755D492FF2F60F7249466 /* ToastPiston.swift in Sources */,
 				0F27496441DFBF136028C4A09056417D /* ToastPiston-dummy.m in Sources */,
 			);
@@ -492,8 +496,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

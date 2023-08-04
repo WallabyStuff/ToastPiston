@@ -95,29 +95,25 @@ extension UIViewController {
     
     // Animate the visual effect view from top to bottom
     visualEffectView.transform = CGAffineTransform(translationX: 0, y: -totalHeight)
-    UIView.animate(withDuration: Constant.toastPresentationDuration,
-                   delay: 0.0,
-                   usingSpringWithDamping: 0.9,
-                   initialSpringVelocity: 0.9,
-                   options: .curveEaseInOut, animations: {
+    UIView.springAnimate(withDuration: Constant.toastPresentationDuration) {
       visualEffectView.transform = .identity
-    }, completion: { _ in
+    } completion: {
       DispatchQueue.main.asyncAfter(deadline: .now() + Constant.toastDuration, execute: {
         // Only dismiss the toast automatically if the user is not panning
         guard !self.isUserPanning else {
           return
         }
-        UIView.animate(withDuration: Constant.toastPresentationDuration, animations: {
+        UIView.springAnimate(withDuration: Constant.toastPresentationDuration) {
           visualEffectView.transform = CGAffineTransform(translationX: 0, y: -totalHeight)
-        }, completion: { _ in
+        } completion: {
           visualEffectView.removeFromSuperview()
           // Remove the reference to the toast view when it's removed from the superview
           if self.currentToastView == visualEffectView {
             self.currentToastView = nil
           }
-        })
+        }
       })
-    })
+    }
   }
   
   @objc
@@ -153,28 +149,20 @@ extension UIViewController {
       
       // If the user panned upwards with a sufficient velocity, or panned more than half of the toast view's height upwards, then dismiss the toast
       if velocity.y < -500 || translation.y < -toastView.bounds.height / 2 || panGestureExceedsPresentationDuration() {
-        UIView.animate(withDuration: Constant.toastPresentationDuration,
-                       delay: 0.0,
-                       usingSpringWithDamping: 0.9,
-                       initialSpringVelocity: 0.9,
-                       options: .curveEaseInOut, animations: {
+        UIView.springAnimate(withDuration: Constant.toastPresentationDuration) {
           toastView.transform = CGAffineTransform(translationX: 0, y: -toastView.bounds.height)
-        }, completion: { _ in
+        } completion: {
           toastView.removeFromSuperview()
           // Remove the reference to the toast view when it's removed from the superview
           if self.currentToastView == toastView {
             self.currentToastView = nil
           }
-        })
+        }
       } else {
         // Otherwise, bring the toast back to its original position
-        UIView.animate(withDuration: Constant.toastPresentationDuration,
-                       delay: 0.0,
-                       usingSpringWithDamping: 0.9,
-                       initialSpringVelocity: 0.9,
-                       options: .curveEaseInOut, animations: {
+        UIView.springAnimate(withDuration: Constant.toastPresentationDuration) {
           toastView.transform = .identity
-        })
+        }
       }
     default:
       break
