@@ -1,0 +1,42 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "ToastPiston-debug.module": ["<ToastPiston-debug.module>"]
+  "main": ["<ToastPiston-debug.module>"]
+  "test": ["<ToastPiston-debug.module>"]
+default: "main"
+nodes:
+  "/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Sources/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "<ToastPiston-debug.module>":
+    tool: phony
+    inputs: ["/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build/ToastPiston.swift.o","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build/UIView+SpringAnimate.swift.o","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.swiftmodule"]
+    outputs: ["<ToastPiston-debug.module>"]
+
+  "C.ToastPiston-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Sources/ToastPiston.swift","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Sources/UIView+SpringAnimate.swift"]
+    outputs: ["/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build/ToastPiston.swift.o","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build/UIView+SpringAnimate.swift.o","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.swiftmodule"]
+    executable: "/Applications/Xcode 14.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "ToastPiston"
+    module-output-path: "/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.swiftmodule"
+    import-paths: ["/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build"
+    objects: ["/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build/ToastPiston.swift.o","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build/UIView+SpringAnimate.swift.o"]
+    other-args: ["-target","arm64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/.build/arm64-apple-macosx/debug/ToastPiston.build/ToastPiston-Swift.h","-sdk","/Applications/Xcode 14.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode 14.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode 14.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode 14.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Sources/ToastPiston.swift","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Sources/UIView+SpringAnimate.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 10
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Sources/","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Package.swift","/Users/leeseunggi/Workspace/iOSProjects/Libraries/ToastPiston/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
