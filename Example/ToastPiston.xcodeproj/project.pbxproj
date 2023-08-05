@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46D37A1C30DEEF32DB572290 /* Pods_ToastPiston_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56133B0D44F970FA1297FBAA /* Pods_ToastPiston_Tests.framework */; };
-		57A19F52D209D88729D3C441 /* Pods_ToastPiston_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDF43C1BAABA837C2F38039 /* Pods_ToastPiston_Example.framework */; };
+		1C3F5F43DA29F0F7A83B9C62 /* Pods_ToastPiston_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C1AB88BDF2054C5E7F49A9 /* Pods_ToastPiston_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		941DBB320F296578CC74B49B /* Pods_ToastPiston_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB78CA027433B7651AC101 /* Pods_ToastPiston_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		175E630D8CE4511090FA7D81 /* Pods-ToastPiston_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Tests.release.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Tests/Pods-ToastPiston_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		24AB78CA027433B7651AC101 /* Pods_ToastPiston_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastPiston_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2823DE4B691920697004B5E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		56133B0D44F970FA1297FBAA /* Pods_ToastPiston_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastPiston_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDB6CC6628F88DE68D08BF2 /* Pods-ToastPiston_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Example.debug.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ToastPiston_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToastPiston_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +41,12 @@
 		607FACE51AFB9204008FA782 /* ToastPiston_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToastPiston_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6B162225ECC31B8FFD7CEE72 /* Pods-ToastPiston_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Tests.release.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Tests/Pods-ToastPiston_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7FD03DE16C38C6C8E7D5CEC7 /* ToastPiston.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ToastPiston.podspec; path = ../ToastPiston.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		8E975B85E832F056A6ECBA5C /* Pods-ToastPiston_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Example.debug.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		90937FA9F91A85B0654719CC /* Pods-ToastPiston_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Tests/Pods-ToastPiston_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		95D29B3811A1661F29F70BCC /* Pods-ToastPiston_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Example.release.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BCDF43C1BAABA837C2F38039 /* Pods_ToastPiston_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastPiston_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8BAF8A05B9D45CCA62E7FB /* Pods-ToastPiston_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Example.release.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CD8A7ADA56C85404B4A30FA7 /* Pods-ToastPiston_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToastPiston_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ToastPiston_Tests/Pods-ToastPiston_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8F04CD5661B7B17FFBB50DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E8C1AB88BDF2054C5E7F49A9 /* Pods_ToastPiston_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToastPiston_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A19F52D209D88729D3C441 /* Pods_ToastPiston_Example.framework in Frameworks */,
+				1C3F5F43DA29F0F7A83B9C62 /* Pods_ToastPiston_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D37A1C30DEEF32DB572290 /* Pods_ToastPiston_Tests.framework in Frameworks */,
+				941DBB320F296578CC74B49B /* Pods_ToastPiston_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				FA95E12775AB0A66E337F0E4 /* Pods */,
-				744DBCB779837B4FBB3D35FD /* Frameworks */,
+				9979DE7048A84D435645446A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,11 +139,11 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		744DBCB779837B4FBB3D35FD /* Frameworks */ = {
+		9979DE7048A84D435645446A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BCDF43C1BAABA837C2F38039 /* Pods_ToastPiston_Example.framework */,
-				56133B0D44F970FA1297FBAA /* Pods_ToastPiston_Tests.framework */,
+				E8C1AB88BDF2054C5E7F49A9 /* Pods_ToastPiston_Example.framework */,
+				24AB78CA027433B7651AC101 /* Pods_ToastPiston_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 		FA95E12775AB0A66E337F0E4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8E975B85E832F056A6ECBA5C /* Pods-ToastPiston_Example.debug.xcconfig */,
-				95D29B3811A1661F29F70BCC /* Pods-ToastPiston_Example.release.xcconfig */,
-				90937FA9F91A85B0654719CC /* Pods-ToastPiston_Tests.debug.xcconfig */,
-				175E630D8CE4511090FA7D81 /* Pods-ToastPiston_Tests.release.xcconfig */,
+				5CDB6CC6628F88DE68D08BF2 /* Pods-ToastPiston_Example.debug.xcconfig */,
+				CC8BAF8A05B9D45CCA62E7FB /* Pods-ToastPiston_Example.release.xcconfig */,
+				CD8A7ADA56C85404B4A30FA7 /* Pods-ToastPiston_Tests.debug.xcconfig */,
+				6B162225ECC31B8FFD7CEE72 /* Pods-ToastPiston_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -166,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ToastPiston_Example" */;
 			buildPhases = (
-				7E6AA3C3D2D135536CAB79DC /* [CP] Check Pods Manifest.lock */,
+				C8C8BD4BE9B423905F014E63 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				9484AC8490B6ABA3AE298E99 /* [CP] Embed Pods Frameworks */,
+				7BC5BE0657383FC6945138A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ToastPiston_Tests" */;
 			buildPhases = (
-				2B08DBA4D4699677976CBAA7 /* [CP] Check Pods Manifest.lock */,
+				AB5C573982846FCB0CA137D7 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -264,7 +264,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B08DBA4D4699677976CBAA7 /* [CP] Check Pods Manifest.lock */ = {
+		7BC5BE0657383FC6945138A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ToastPiston/ToastPiston.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ToastPiston.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB5C573982846FCB0CA137D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,7 +304,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E6AA3C3D2D135536CAB79DC /* [CP] Check Pods Manifest.lock */ = {
+		C8C8BD4BE9B423905F014E63 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,24 +324,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9484AC8490B6ABA3AE298E99 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ToastPiston/ToastPiston.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ToastPiston.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToastPiston_Example/Pods-ToastPiston_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -484,7 +484,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E975B85E832F056A6ECBA5C /* Pods-ToastPiston_Example.debug.xcconfig */;
+			baseConfigurationReference = 5CDB6CC6628F88DE68D08BF2 /* Pods-ToastPiston_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 497P4L97SV;
@@ -503,7 +503,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95D29B3811A1661F29F70BCC /* Pods-ToastPiston_Example.release.xcconfig */;
+			baseConfigurationReference = CC8BAF8A05B9D45CCA62E7FB /* Pods-ToastPiston_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 497P4L97SV;
@@ -522,7 +522,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90937FA9F91A85B0654719CC /* Pods-ToastPiston_Tests.debug.xcconfig */;
+			baseConfigurationReference = CD8A7ADA56C85404B4A30FA7 /* Pods-ToastPiston_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -549,7 +549,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 175E630D8CE4511090FA7D81 /* Pods-ToastPiston_Tests.release.xcconfig */;
+			baseConfigurationReference = 6B162225ECC31B8FFD7CEE72 /* Pods-ToastPiston_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				FRAMEWORK_SEARCH_PATHS = (

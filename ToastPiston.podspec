@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ToastPiston'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '심플한 토스트 메세지 입니다.'
   s.swift_versions   = '5.0'
 

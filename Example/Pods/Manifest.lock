@@ -1,5 +1,5 @@
 PODS:
-  - ToastPiston (0.1.1)
+  - ToastPiston (0.1.2)
 
 DEPENDENCIES:
   - ToastPiston (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ToastPiston: 5fd52f3a1da72c5c511ef4445cdb063d3cdaa7fc
+  ToastPiston: 85135d46b6606700deb0adaacdc1cf08935e6fce
 
 PODFILE CHECKSUM: fca8f83525fa1c6e4240bbb6dee21ac07b1af553
 

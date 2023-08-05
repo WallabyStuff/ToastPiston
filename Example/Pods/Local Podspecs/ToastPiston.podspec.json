@@ -1,6 +1,6 @@
 {
   "name": "ToastPiston",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "심플한 토스트 메세지 입니다.",
   "swift_versions": "5.0",
   "description": "TODO: Add long description of the pod here.",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/WallabyStuff/ToastPiston.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "13.0"
