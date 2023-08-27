@@ -1,11 +1,14 @@
-# ToastPiston
-
-[![CI Status](https://img.shields.io/travis/WallabyStuff/ToastPiston.svg?style=flat)](https://travis-ci.org/WallabyStuff/ToastPiston)
-![Static Badge](https://img.shields.io/badge/spm-blue)
-[![Version](https://img.shields.io/cocoapods/v/ToastPiston.svg?style=flat)](https://cocoapods.org/pods/ToastPiston)
-[![License](https://img.shields.io/cocoapods/l/ToastPiston.svg?style=flat)](https://cocoapods.org/pods/ToastPiston)
-[![Platform](https://img.shields.io/cocoapods/p/ToastPiston.svg?style=flat)](https://cocoapods.org/pods/ToastPiston)
-
+<div align="center">
+  <img src="https://github.com/WallabyStuff/ToastPiston/assets/63496607/f6c3dbda-5870-43c0-b318-4b72147b787c" width="100">
+  <h1>ToastPiston</h1>
+ 
+  [![CI Status](https://img.shields.io/travis/WallabyStuff/ToastPiston.svg?style=flat)](https://travis-ci.org/WallabyStuff/ToastPiston)
+  ![Static Badge](https://img.shields.io/badge/spm-blue)
+  [![Version](https://img.shields.io/cocoapods/v/ToastPiston.svg?style=flat)](https://cocoapods.org/pods/ToastPiston)
+  [![License](https://img.shields.io/cocoapods/l/ToastPiston.svg?style=flat)](https://cocoapods.org/pods/ToastPiston)
+  [![Platform](https://img.shields.io/cocoapods/p/ToastPiston.svg?style=flat)](https://cocoapods.org/pods/ToastPiston)
+  ![SwiftPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)
+</div>
 
 <br>
 <br>
